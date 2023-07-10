@@ -45,8 +45,8 @@ class _customButtonState extends State<customButton> {
         ),
         child: Center(
           child: widget.isIcon == true
-              ? LottieBuilder.network(
-                  'https://assets3.lottiefiles.com/packages/lf20_6UVhfF.json',
+              ? LottieBuilder.asset(
+                  'assets/forwardarrow.json',
                   height: 100,
                   width: 100,
                 )

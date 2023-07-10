@@ -35,8 +35,7 @@ class _OfflinePageState extends State<OfflinePage> {
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Text("Network Error"),
-          // LottieBuilder.network(
-          //     'https://assets6.lottiefiles.com/packages/lf20_b8rtfk3s.json'),
+          LottieBuilder.asset('assets/error.json'),
           ElevatedButton(
               onPressed: () async {
                 bool isConnected = await checkInternetConnectivity();

@@ -24,7 +24,7 @@ class _joinGroupState extends State<joinGroup> {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Join Page",
+            "Join Group",
           ),
           centerTitle: true,
         ),
@@ -34,8 +34,7 @@ class _joinGroupState extends State<joinGroup> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              LottieBuilder.network(
-                  'https://assets7.lottiefiles.com/packages/lf20_ghg0pifn.json'),
+              LottieBuilder.asset('assets/friends.json'),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: CustomTextField(
@@ -64,7 +63,6 @@ class _joinGroupState extends State<joinGroup> {
                         ),
                       );
                     } else {
-                      print("I am in else part");
                       try {
                         kroomId = roomId;
                         widget.chatServiceObject.joinRoom(roomId);

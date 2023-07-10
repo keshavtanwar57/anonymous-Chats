@@ -42,7 +42,7 @@ class _GroupChatPageState extends State<GroupChatPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Anonymous Group"),
+        title: const Text("Anonymous Group"),
         centerTitle: true,
         elevation: 1,
       ),
@@ -56,7 +56,7 @@ class _GroupChatPageState extends State<GroupChatPage> {
             children: [
               Expanded(
                   child: GroupedListView<customMessage, DateTime>(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       reverse: true,
                       order: GroupedListOrder.DESC,
                       elements: Messages,
@@ -83,7 +83,8 @@ class _GroupChatPageState extends State<GroupChatPage> {
                             ),
                           ))),
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -98,7 +99,7 @@ class _GroupChatPageState extends State<GroupChatPage> {
                           backgroundColor: Colors.grey.shade900,
                           onPressed: () {
                             String textData = _mssgController.text;
-                            if (!textData.isEmpty) {
+                            if (textData.isNotEmpty) {
                               // function sending data to the server
                               widget.chatServiceObject
                                   .sendDataToServer(textData);
@@ -116,8 +117,8 @@ class _GroupChatPageState extends State<GroupChatPage> {
                           },
                           child: Transform.rotate(
                             angle: 90 * 3.1415927 / 180,
-                            child: LottieBuilder.network(
-                                'https://assets8.lottiefiles.com/packages/lf20_YNqYo4yd8y.json'),
+                            child:
+                                LottieBuilder.asset('assets/SendButton.json'),
                           ))
                     ],
                   ))

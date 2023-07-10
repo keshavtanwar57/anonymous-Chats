@@ -53,6 +53,7 @@ class _selectAvatarState extends State<selectAvatar> {
                 await prefs.setInt('avatarIndex', avatarIndex);
                 setState(() {});
                 Navigator.pop(context);
+                setState(() {});
               },
               child: Card(
                 child: LottieBuilder.network(item),

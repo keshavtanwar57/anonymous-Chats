@@ -50,10 +50,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String initialPage;
-    if (username != null && username!.isNotEmpty && avatarIndex != null) {
+    if (username != null && username!.isNotEmpty) {
       initialPage = '/user_group';
       kUsername = username!;
-      avatarIndex = savedAvatarIndex!;
+      if (savedAvatarIndex == null) {
+        avatarIndex = 2;
+      } else {
+        avatarIndex = savedAvatarIndex!;
+      }
     } else {
       initialPage = '/home_page';
     }

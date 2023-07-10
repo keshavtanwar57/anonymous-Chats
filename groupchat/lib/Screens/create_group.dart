@@ -28,7 +28,7 @@ class _createGroupState extends State<createGroup> {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Create Group Page",
+            "Create Group",
           ),
           centerTitle: true,
         ),
@@ -38,8 +38,7 @@ class _createGroupState extends State<createGroup> {
           child: Column(
             children: [
               Expanded(
-                child: LottieBuilder.network(
-                    'https://assets7.lottiefiles.com/packages/lf20_ghg0pifn.json'),
+                child: LottieBuilder.asset('assets/friends.json'),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
