@@ -7,11 +7,7 @@ class ChatService {
   IO.Socket? socket;
 
   void init() {
-    // socket = IO.io("http://10.0.2.2:3000/", <String, dynamic>{
-    //   "transports": ["websocket"],
-    //   "autoConnect": false
-    // });
-    socket = IO.io("https://anonymous-hni9.onrender.com/", <String, dynamic>{
+    socket = IO.io("http://10.0.2.2:3000/", <String, dynamic>{
       "transports": ["websocket"],
       "autoConnect": false
     });
