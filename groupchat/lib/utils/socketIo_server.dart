@@ -7,7 +7,8 @@ class ChatService {
   IO.Socket? socket;
 
   void init() {
-    socket = IO.io("http://10.0.2.2:3000/", <String, dynamic>{
+    String Server = "http://10.0.2.2:3000/";
+    socket = IO.io(Server, <String, dynamic>{
       "transports": ["websocket"],
       "autoConnect": false
     });

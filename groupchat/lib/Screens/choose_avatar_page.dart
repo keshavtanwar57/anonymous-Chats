@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:groupchat/utils/constansts.dart';
+import 'package:groupchat/widgets/custom_avatar.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -51,9 +52,9 @@ class _selectAvatarState extends State<selectAvatar> {
                 avatarLink = item;
                 avatarIndex = index;
                 await prefs.setInt('avatarIndex', avatarIndex);
-                setState(() {});
-                Navigator.pop(context);
-                setState(() {});
+                setState(() {
+                  Navigator.pop(context);
+                });
               },
               child: Card(
                 child: LottieBuilder.network(item),
